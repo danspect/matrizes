@@ -17,14 +17,15 @@ class Matrizes:
                                          [ 4  5 ]
 
         Note que para uma matriz ser transposta precisamos
-        reescreve-la inverter as posições dos índices i e j
-        (ambos iguais a 1),ou seja, onde for ij reescrevemos
-        ji e os índices m(linhas) e n(colunas):
+        reescreve-la invertendo as posições dos índices i e j
+        (ambos iguais a 1), ou seja, onde for ij reescrevemos
+        ji e os índices m(linhas) e n(colunas) também devem
+        ser invertidos:
 
-        [ a(ij)       b(ij + 1)      ... c(in)      ]      [ a'(ji)       b'(ji + 1)      ...  c'(j m)      ]  
-        [ d(i + 1 j)  e(i + 1 j + 1) ... f(i + 1 n) ] ---> [ d'(j + 1 i)  e(j + 1 i + 1)  ...  f(j + 1 m)   ]
-        [ ...         ...            ...            ]      [ ...          ...             ...               ]
-        [ g(m j)      h(m j + 1)     ... k(mn)      ]      [ g(n i)       h(n i + 1)      ...  k(nm)        ]
+        [ a(ij)       b(ij + 1)      ... c(in)      ]      [ a'(ji)       b'(ji + 1)       ...  c'(j m)     ]  
+        [ d(i + 1 j)  e(i + 1 j + 1) ... f(i + 1 n) ] ---> [ d'(j + 1 i)  e'(j + 1 i + 1)  ...  f'(j + 1 m) ]
+        [ ...         ...            ...            ]      [ ...          ...              ...              ]
+        [ g(m j)      h(m j + 1)     ... k(mn)      ]      [ g'(n i)      h'(n i + 1)      ...  k'(nm)      ]
 
         note que 
         a' = a
@@ -60,10 +61,10 @@ class Matrizes:
 
         return matriz_transposta
 
-if __name__ == "__main__":
-    matrizes = Matrizes()
-    linhas, colunas = random.randint(1, 20), random.randint(1, 20)
-    matriz = np.random.randint(1, 20, size=(linhas, colunas))
-    print(f"Matriz original: \n{matriz}\n")
-    matriz_transposta = matrizes.transpor(matriz)
-    print(f"Matriz transposta: \n{matriz_transposta}\n")
+# if __name__ == "__main__":
+#     matrizes = Matrizes()
+#     linhas, colunas = random.randint(1, 20), random.randint(1, 20)
+#     matriz = np.random.randint(1, 20, size=(linhas, colunas))
+#     print(f"Matriz original: \n{matriz}\n")
+#     resultado = matrizes.transpor(matriz)
+#     print(f"Matriz transposta: \n{resultado}\n")
